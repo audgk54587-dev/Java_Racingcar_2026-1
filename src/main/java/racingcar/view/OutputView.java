@@ -5,7 +5,7 @@ import racingcar.model.Car;
 import java.util.List;
 
 public class OutputView {
-    private static final String Symbol = "-";
+    private static final String SYMBOL = "-";
 
     public static void printResultMessage() {
         System.out.println("실행 결과");
@@ -14,15 +14,15 @@ public class OutputView {
     public static void printRoundResult(List<Car> cars) {
         for (Car car : cars) {
             String name = car.getName();
-            String dashes = convertSymbol(car.getPosition());
+            String dashes = convertSYMBOL(car.getPosition());
 
             System.out.println(name + " : " + dashes);
         }
         System.out.println();
     }
 
-    private static String convertSymbol(int position) {
-        return Symbol.repeat(position);
+    private static String convertSYMBOL(int position) {
+        return SYMBOL.repeat(position);
     }
 
     public static void printWinners(List<String> winners) {

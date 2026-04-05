@@ -1,6 +1,10 @@
 package racingcar.model;
 
 public class Car {
+    private static final int MOVE_THRESHOLD = 4;
+    private static final int MIN_NAME_LENGTH = 1;
+    private static final int MAX_NAME_LENGTH = 5;
+
     private final String name;
     private int position=0;
 
@@ -12,7 +16,7 @@ public class Car {
     }
 
     public void move(int num){
-        if(num>=4) {
+        if (num >= MOVE_THRESHOLD) {
             position += 1;
         }
     }
